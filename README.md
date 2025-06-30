@@ -1,3 +1,3 @@
 # rsschool-cv
 
-https://github.com/LyoshaCopenhagen
+https://LyoshaCopenhagen.github.io/rsschool-cv/cv
