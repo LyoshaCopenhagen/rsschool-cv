@@ -16,3 +16,29 @@ I am a motivated and enthusiastic beginner Front-End Developer with a background
 - CSS
 - JavaScript
 - Git
+
+## Code Example
+
+```js
+function isPalindrome(str) {
+  const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const reversedStr = cleanStr.split("").reverse().join("");
+  return cleanStr === reversedStr;
+}
+
+console.log(isPalindrome("A man, a plan, a canal, Panama")); // true
+console.log(isPalindrome("Hello, world")); // false
+```
+
+## Work Experience
+
+I don't have professional experience yet, but I am actively studying and working on personal and educational projects to improve my skills.
+
+## Education
+
+Yanka Kupala State University of Grodno, Belarus
+Degree: Economist-Manager
+
+## English
+
+B1 (Intermediate). Able to read technical documentation and communicate in English.
