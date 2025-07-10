@@ -9,6 +9,8 @@
 }
 a {
   text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: all 0.3s ease;
 }
 ul,
 ol,
@@ -36,10 +38,133 @@ body {
   color: rgb(0, 0, 0);
   font-family: "Inter";
   letter-spacing: 0px;
+  scroll-behavior: smooth;
 }
 .wrapper {
   min-height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+._container {
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+/****HEADER****/
+.header {
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+}
+
+.header_logo {
+  padding: 15px 25px;
+  display: inline-block;
+  font-size: 48px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  z-index: 150;
+}
+.header_logo:hover {
+  background-color: #f0f0f0;
+}
+.menu {
+  padding: 5px 0;
+}
+.menu_list {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.menu_link {
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.menu_link:hover {
+  background-color: #f0f0f0;
+}
+
+.menu__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 101;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.menu__burger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #000;
+  transition: all 0.3s ease;
+  margin: 5px 0;
+}
+
+@media (max-width: 1024px) {
+  .menu__burger {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    width: 100%;
+    height: 100vh;
+    transition: all 0.3s ease;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu.active {
+    transform: translateX(0%);
+  }
+
+  .menu_list {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu_link {
+    padding: 20px;
+    font-size: 25px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu_link:hover {
+    background-color: #ffffff;
+  }
+  .header_logo:hover {
+    background-color: #ffffff;
+  }
+  .menu__burger.active {
+    transform: rotate(-90deg);
+  }
 }
