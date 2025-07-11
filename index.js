@@ -23,12 +23,6 @@ window.addEventListener("DOMContentLoaded", () => {
       menuOpen();
     }
   });
-  logo.addEventListener("click", () => {
-    menuClose();
-  });
-  menuLinks.forEach((link) =>
-    link.addEventListener("click", () => {
-      menuClose();
-    })
-  );
+  logo.addEventListener("click", menuClose);
+  menuLinks.forEach((link) => link.addEventListener("click", menuClose));
 });
